@@ -1,13 +1,57 @@
-# <p align="center"><strong>🧩 ***Unidad*** 2 🧩</strong></p>
+# <p align="center"><strong>🧩 ***Unidad 2*** 🧩</strong></p>
 
-
-##    <p align="center"><strong>***Temas Vistos en la Unidad 2***</strong></p>
-
----
 
 ##    <p align="center"><strong>🔀 ***Aprendizaje autónomo:***</strong></p>
-###   🟢 1. Estructura Condicional Simple "If":
+###   🟢 Ejemplo 1: Sistema de Biblioteca :
 💡 Descripción: 
+
+Una biblioteca registra libros y autores. Un libro puede tener varios autores y un autor varios libros. Los socios toman libros prestados; de cada préstamo interesan la fecha de retiro y la de devolución.
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🔵 Ejemplo 2: Pedidos de Restaurante :
+💡 Descripción: 
+
+Los clientes realizan pedidos que contienen varios platos con distinta cantidad. Los platos se agrupan en categorías. Cada pedido lo atiende un único mesero. El precio del plato debe registrarse tal como estaba al momento del pedido, aunque luego cambie.
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🟡 Ejemplo 3: Clínica Médica :
+💡 Descripción: 
+
+Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en fecha, hora y consultorio. De algunas citas se genera una receta que incluye medicamentos con dosis y duración. Cada médico pertenece a una especialidad.
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🟢 Ejemplo 4: Sistema de Aerolínea :
+💡 Descripción: 
+
+Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cada vuelo lo realiza un avión. Los pasajeros realizan reservas para un vuelo específico, indicando asiento y tarifa pagada en el momento de la reserva.
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🔵 Ejercicio 5: Empresa Discográfica :
+💡 Descripción: 
+
+Una empresa discográfica necesita modelar los datos sobre sus diferentes recursos según las siguientes características:
+
+🔹 Manager: de cada mánager se almacena un identificador de manager y su nombre. Un manager representa a una serie de artistas.
+
+🔹 Artista: un artista es representado por un manager. De los artistas se almacena su nombre completo (usando un único atributo) y su NIF.
+
+🔹 Evento de promoción: los artistas participan en eventos de promoción para dar a conocer sus trabajos. En un evento de promoción pueden participar varios artistas. De un evento se almacena un identificador único, la fecha de celebración y el número de asistentes.
 
 
 ####   🖥️ Diagrama:
@@ -15,183 +59,130 @@
 
 
 ---
+###   🟡 Ejercicio 6: Tienda Informática :
+💡 Descripción: 
 
+Se desea crear una aplicación para la gestión de una tienda informática. La tienda dispone de una serie de productos que se venden a los clientes. De cada producto informático se desea guardar el código, descripción, precio y número de existencias. De cada cliente se desea guardar el código, nombre, apellidos, dirección y número telefónico. Un cliente puede comprar varios productos en la tienda y un mismo producto puede ser comprado por varios clientes. Cada vez que se compre un artículo quedará registrada la compra en la base de datos junto con la fecha en la que se compró el artículo. La tienda tiene contactos con varios proveedores que son los que suministran los productos. Un mismo producto puede ser suministrado por varios proveedores. De cada proveedor se desea guardar el código, nombres, apellidos, dirección, provincia y número de teléfono.
 
-###   🔵 2. Estructura Condicional Doble "If-Else":
-💡 Descripción: La condición if-else, es una instrucción condicional que evalúa una expresión booleana. Si la condición es verdadera se ejecuta el bloque de código dentro del if. Si la condición es falsa el programa ejecutará el otro código de bloque dentro del else, esto asegura que siempre haya una acción, sin dejar el programa en blanco [4].
-
-####   🔹Ejemplo:
-Dado como dato el sueldo de un trabajador:
-
-- ⚡ Aumento 45% si <1000  
-- ⚡ Descuento 10% si ≥1000
-
-Finalmente mostrar el sueldo con el aumento o el descuento efectuado.
-
-####   💻 Código en C: 
-<img width="647" height="422" alt="image" src="https://github.com/user-attachments/assets/1596a35b-c39d-4146-9ee6-ccccd04668fa" />
-
-
-####   🖥️ Diagrama de Flujo: 
-<img width="1400" height="950" alt="image" src="https://github.com/user-attachments/assets/761d55f7-d2c3-482c-8687-5246d44930d6" />
-
-
----
-
-
-###   🟡 3. Estructura Condicional Múltiple "Switch":
-💡 Descripción: La condición switch, no evalúa directamente un valor booleano, si no que compara un valor con varias opciones posibles. Según el caso que coincida se ejecutará la acción correspondiente. Si ninguna coincide, se usa un “default” como salida [4].
-
-####   🔹Ejemplo:
-Se desea diseñar un algoritmo que escriba los nombres de los días de la semana en función del valor de una variable dia introducida por teclado.
-
-####   💻 Código en C: 
-<img width="802" height="928" alt="image" src="https://github.com/user-attachments/assets/2cf37bcb-e334-4cd3-b4a8-d20f35ee4498" />
-
-####   🖥️ Diagrama de Flujo: 
-<img width="1507" height="548" alt="image" src="https://github.com/user-attachments/assets/1b0ed12b-4eed-4a4c-8f42-5557f0a4504b" />
-
-
----
-
-
-##    <p align="center"><strong>🔄 ***Estructuras Repetitivas:***</strong></p>
-
-###   🟢 1. Estructura Repetitiva "While":
-💡 Descripción: La estructura repetitiva while, sirve para repetir una acción un número desconocido de veces, pero esta acción depende de una condición, la condición se analiza al principio y después se ejecutará la acción si es verdadera. Mientras la condición sea verdadera seguirá ejecutándose y dejará de ejecutarse cuando la condición pasa a hacer falsa [4].
-
-####   🔹Ejemplo:
-Este código lee números positivos ingresados hasta que se ingresa un número ≤ cero.
-
-####   💻 Código en C:
-<img width="777" height="431" alt="image" src="https://github.com/user-attachments/assets/b372f270-04e8-4aa3-b12e-1da769df680b" />
-
-
-####   🖥️ Diagrama de Flujo:
-<img width="979" height="955" alt="image" src="https://github.com/user-attachments/assets/c480a0a1-d8c2-4a2d-bb6c-ccf887288777" />
-
-
----
-
-
-###   🔵 2. Estructura Repetitiva "Do-While":
-💡 Descripción: La estructura repetitiva do-while, sirve para repetir una acción un número desconocido de veces, la condición se analiza al final, y la acción se ejecutará al menos una vez sin tener en cuenta la condición inicial, una vez ejecutada la acción se valida la condición, si la condicón es verdadera se seguirá ejecutando.
-Mientras la condición sea verdadera seguirá ejecutándose y dejará de ejecutarse cuando la condición pasa a hacer falsa [4].
-
-####   🔹Ejemplo:
-Este código lee números positivos ingresados hasta que se ingresa un número ≤ cero.
-
-####   💻 Código en C: 
-<img width="752" height="456" alt="image" src="https://github.com/user-attachments/assets/8556c457-d937-4ce2-a27c-c14ef9a7d76c" />
-
-
-####   🖥️ Diagrama de Flujo: 
-<img width="1156" height="972" alt="image" src="https://github.com/user-attachments/assets/8e70f3c4-f796-4098-9003-f8814b86043e" />
-
-
----
-
-
-###   🟡 3. Estructura Repetitiva "For":
-💡 Descripción: La estructura repetitiva for, sirve para repetir una acción un número conocido de veces, la condición se analiza al principio antes de volver a realizar la acción, y deja de ejecutarse cuando el contador llega al límite puesto [4].
-
-####   🔹Ejemplo:
-Este código muestra los numeros del 1 al 10 y al revés, es decir del 10 al 1.
-
-####   💻 Código en C: 
-<img width="568" height="457" alt="image" src="https://github.com/user-attachments/assets/77d8af35-bb61-4360-8a36-5cd8104cb958" />
-
-
-####   🖥️ Diagrama de Flujo: 
-<img width="1286" height="960" alt="image" src="https://github.com/user-attachments/assets/45db870b-7d73-4cf5-9067-ebeb4945a767" />
-
-
----
-
-
-##    ☕ ***Ejercicio Combinando Estructuras Condicionales y Repetitivas en Java*** 
-###   🟢 1. Estructura Combinando "If y Do-While":
-####  💡 Descripción: 
-Calculadora que divide valores, evitando dividir entre cero.
-
-- ⚡Los datos de entrada son: `"El numerdador y el denominador"`
-
-- ⚡Los datos de salida son: `"El cociente"`
-
-####   💻 Programa en Java:
-<img width="1000" height="640" alt="image" src="https://github.com/user-attachments/assets/315e9d1f-8ba3-40fd-8662-264a3231982f" />
-
-####   🖥️ Diagrama de flujo simplificado:
-<img width="1264" height="853" alt="image" src="https://github.com/user-attachments/assets/eee13883-17fb-46dc-8486-9ebe96c7893c" />
-
-
-####   ✅ Verificación:
-<img width="497" height="221" alt="image" src="https://github.com/user-attachments/assets/89ba01e0-68db-4e9a-8b1b-e474a4303a25" />
+####   🖥️ Diagrama:
 
 
 
 ---
----
+###   🟢 Ejercicio 7: Discos Musicales :
+💡 Descripción:
+
+🔹 La tienda vende discos de diferentes géneros musicales y cantantes
+
+🔹 Cada género musical tiene un identificador
+
+🔹 Cada disco tiene título, género musical, precio y cantante
+
+🔹 De un cantante se registra el nombre y su país, Todo disco pertenece a un cantante y un cantante puede tener muchos discos. Además, un disco tiene un conjunto de canciones (identificador y título)
+
+🔹 Un disco tiene muchas canciones y una canción puede estar en varios discos. Interesa conocer la posición de una canción en un determinado disco
 
 
-
-##    <p align="center"><strong>📝 ***Actividades Realizadas en Toda la Unidad:*** </strong></p>
-
-##    💻 ***APE - Aprendizaje Práctico Experimental***
-
-###    1. Aplicación de estructuras condicionales en la resolución de problemas: 
-####  🔗 [Actividad APE 1](https://drive.google.com/file/d/1Y4V9PSsYq6DKEvUWAGiUTZtGriKbiVRc/view?usp=sharing)
+####   🖥️ Diagrama:
 
 
-
-###    2. Aplicación de estructuras repetitivas en la resolución de problemas: 
-####  🔗 [Actividad APE 2](https://drive.google.com/file/d/1lj5ecMkqP5JNjuHGO_9MepNU08-H8EYE/view?usp=sharing)
-
-
-
-
----
-
-##    💡***AA - Aprendizaje Autónomo***
-
-###    1. Diferencias entre los tipos de estructuras condicionales :
-####  🔗 [Actividad AA 1](https://drive.google.com/file/d/1pg4PMEiDRICXJg00HwWPgJk3HpmO1KwT/view?usp=sharing)
-
-###    2. Cuadro Comparativo Entre las Estructuras Repetitivas : 
-####  🔗 [Actividad AA 2](https://drive.google.com/file/d/1yzUdAVjJALTYK6g7vgDpYGvxP63yFMRq/view?usp=sharing)
 
 ---
----
+###   🔵 Ejercicio 8: Camiones :
+💡 Descripción: 
 
-##   📌 ***Principales dificultades en la aplicación de los contenidos***
-- ⚡ Dificultad en diferenciar `while` y `do-while`
-- ⚡ Uso del `for`
-- ⚡ Manejo de acumuladores y contadores
+Se desea informatizar la gestión de una empresa de transporte que reparte paquetes por toda España. Los encargados de llevar los paquetes son los camioneros, de los que se quiere guardar la cédula, nombre, teléfono, dirección, salario y población en que vive. De los paquetes transportados interesa conocer el código del paquete, descripción, destinatario y dirección del destinatario.
+
+Un camionero distribuye muchos paquetes, y un paquete sólo puede ser distribuido por un camionero. De las provincias a las que llegan los paquetes interesa guardar el código de provincia y el nombre. Un paquete sólo puede llegar a una provincia. Sin embargo, a una provincia pueden llegar varios paquetes.
+
+De los camiones que llevan los camioneros, interesa conocer la matrícula, modelo, tipo y potencia. Un camionero puede conducir diferentes camiones en fechas diferentes, y un camión puede ser conducido por varios camioneros.
+
+
+####   🖥️ Diagrama:
+
+
 
 ---
+###   🟡 Ejercicio 9: Veterinaria :
+💡 Descripción: 
+
+🔹 Del propietario interesa: cédula, apellidos, nombres, dirección, teléfonos
+
+🔹 De la mascota interesa: identificador, nombre, fecha de nacimiento, tipo
+
+🔹 Un propietario puede llevar una o varias mascotas
+
+🔹 Una mascota la lleva uno y solo un propietario
+
+🔹 Del personal de la clínica veterinaria interesa un código, la cédula, nombre
+
+🔹 Entre el personal de la clínica se distingue a los veterinarios y los auxiliares, pudiendo haber otros tipos
+Del veterinario se guarda además su fecha_alta y especialidad
+De los auxiliares interesa su base de cotización
+
+🔹Las mascotas pasan consulta con los veterinarios. De manera que:
+Un veterinario puede pasar consulta a ninguna o a varias mascotas, y una misma mascota de la clínica ha pasado consulta una o más veces en fechas diferentes con varios veterinarios.
+Al pasar consulta se realiza un diagnóstico.
+
+🔹 Cada propietario tiene un familiar de contacto para casos de emergencia.
+De este familiar interesa la cédula, nombre y teléfono.
+Si el propietario se da de alta en la clínica veterinaria, el familiar ya no interesa.
+El familiar es contacto de un solo propietario
+
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🟢 10. :
+💡 Descripción: 
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🔵 11. :
+💡 Descripción: 
+
+####   🖥️ Diagrama:
+
+
+
+---
+###   🟡 12. :
+💡 Descripción: 
+
+####   🖥️ Diagrama:
+
+
+
 ---
 
 ##   📝 ***Reflexiones y Conclusiones***
 ###   📌 Conclusiones:
-🔹 Gracias a las condicionales los códigos se ven mas claros y faciles de usar, porque se pueden organizar las diferentes opciones de manera clara. Gracias a esto los programas pueden funcionar de forma correcta en cada caso sin necesidad de repetir instrucciones.
+🔹 
 
-🔹 Al concluir esta unidad nos dimos cuenta que gracais a los bucles podemos repetir acciones muchas veces sin tener que escribirlas una por una. Esto nos ahorra mucho tiempo y hace que el programa sea más corto y eficiente. 
+🔹 
 
-🔹 Gracias a los acumuladores podemos sumar valores dentro de un ciclo y gracias a los contadores podemos llevar la cuenta de cuantas veces ocuurre algo dentro de cada ciclo.
+🔹 
+
 
 
 ###   💡 Reflexión crítica:
 
-🔹 Las condiciones son útiles para que el programa decida qué hacer, pero si se usan demasiado pueden volver el código confuso y difícil de seguir, es mejor aprender a organizarlos bien, porque un exceso de condiciones puede complicar más que ayudar.
+🔹 
 
-🔹 Los ciclos ahorran trabajo al repetir acciones, pero si no se usan bien el ciclo puede quedar en un bucle infinito y asi nunca podría terminar de ejecutarse. Usarlos sin tener claro lo que se necesita puede hacer que el programa sea lento o haga cosas innecesarias y asi gastar memoria innecesaria.
+🔹 
 
-🔹 Los acumuladores son muy necesarios y básicos para sumar o contar dentro de un ciclo, pero si no se inicializan o se manejan de manera adecuada, los resultados pueden ser incorrectos. Aunque parecen simples, son clave para que el programa lleve un buen control de las veces que se repite algo.
+🔹 
 
 
 ---
 
 ###    <p align="center"><strong>[***Volver atrás***](Portafolio.md)</strong></p>
+
 
 
 
