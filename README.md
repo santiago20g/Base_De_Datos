@@ -6,20 +6,20 @@
 
 #      <p align="center"><strong>🎓 Universidad Nacional de Loja 🎓</strong></p>
 
-#      <p align="center"><strong>💻 Teoría de la Programación 💻</strong></p>
+#      <p align="center"><strong>💻 Base de Datos 💻</strong></p>
 
-##     📘 Portafolio Digital de Aprendizaje  
+##     📘 Portafolio Digital  
 
 ---
 ###    Nombre: 
 Richard Santiago Guamán Sánchez
 ###    Carrera: 
-Computación - Segundo Ciclo
+Computación - Tercer Ciclo
 ###    Asignatura: 
-Teoría de la Programación
+Base de Datos
 ###    Período Académico: 
-Septiembre 2025 - Febrero 2026
+Septiembre 2026 - Febrero 2027
 ###    Docente: 
-Ing. Lissette Geoconda López Faicán
+Ing. Edwin René Guamán Quinche
 
 ###    <p align="center"><strong>[***Ir al Portafolio***](Portafolio.md)</strong></p>
