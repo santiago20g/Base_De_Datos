@@ -5,21 +5,13 @@
 
 ---
 
-##    <p align="center"><strong>🔀 ***Estructuras condicionales:***</strong></p>
+##    <p align="center"><strong>🔀 ***Aprendizaje autónomo:***</strong></p>
 ###   🟢 1. Estructura Condicional Simple "If":
-💡 Descripción: La condición if, es una instrucción condicional que evalúa una expresión booleana. Si la condición es verdadera se ejecuta el bloque de código dentro del if. Si la condición es falsa el programa ignora ese bloque y continúa con la siguiente instrucción [4].
-####   🔹 Ejemplo:
-Este código simplemente analiza dos números ingresados.
+💡 Descripción: 
 
-- ⚡ Si el número uno es mayor: `"El primer número es el mayor"`
-- ⚡ Si el número dos es mayor: `"El segundo número es el mayor"`
-- ⚡ Si son iguales: `"Los números son iguales"`
 
-####   💻 Código en C:
-<img width="705" height="555" alt="image" src="https://github.com/user-attachments/assets/bf221b66-6434-4b8a-9dc7-ada06882922e" />
+####   🖥️ Diagrama:
 
-####   🖥️ Diagrama de Flujo:
-<img width="933" height="976" alt="image" src="https://github.com/user-attachments/assets/06edb725-84f5-49e6-9861-ff69df1b51ad" />
 
 
 ---
