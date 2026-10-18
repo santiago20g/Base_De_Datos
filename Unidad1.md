@@ -20,7 +20,9 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 Los clientes realizan pedidos que contienen varios platos con distinta cantidad. Los platos se agrupan en categorías. Cada pedido lo atiende un único mesero. El precio del plato debe registrarse tal como estaba al momento del pedido, aunque luego cambie.
 
 ####   🖥️ Diagrama:
-<img width="721" height="397" alt="image" src="https://github.com/user-attachments/assets/e842b2c3-772f-4bb2-afd0-d45e80167a00" />
+<img width="1208" height="644" alt="image" src="https://github.com/user-attachments/assets/cb724d02-852d-4495-ae12-c5b48c23e88b" />
+
+
 
 
 
@@ -31,6 +33,7 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en fecha, hora y consultorio. De algunas citas se genera una receta que incluye medicamentos con dosis y duración. Cada médico pertenece a una especialidad.
 
 ####   🖥️ Diagrama:
+<img width="1202" height="669" alt="image" src="https://github.com/user-attachments/assets/56105f83-c648-4295-a6d8-09613bcad5db" />
 
 
 
