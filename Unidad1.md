@@ -157,6 +157,7 @@ La empresa necesita administrar sus departamentos, empleados, proyectos y el his
 Cada empleado pertenece a un departamento y puede trabajar en varios proyectos. También existen empleados que supervisan a otros empleados. Se necesita registrar el historial salarial de cada empleado.
 
 ####   🖥️ Diagrama:
+<img width="1094" height="532" alt="image" src="https://github.com/user-attachments/assets/33c163a2-c68d-40fd-99f7-ce2280d22aca" />
 
 
 
@@ -167,6 +168,8 @@ Cada empleado pertenece a un departamento y puede trabajar en varios proyectos. 
 Los alumnos se inscriben en cursos obteniendo una calificación por ciclo. Algunos cursos exigen haber aprobado otros cursos antes, e incluso exigen una nota mínima como prerrequisito.
 
 ####   🖥️ Diagrama:
+<img width="1552" height="509" alt="image" src="https://github.com/user-attachments/assets/dd9547c7-6278-46c9-ab71-e3ebaf2e8bbb" />
+
 
 
 
