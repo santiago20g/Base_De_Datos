@@ -73,6 +73,8 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 Se desea crear una aplicación para la gestión de una tienda informática. La tienda dispone de una serie de productos que se venden a los clientes. De cada producto informático se desea guardar el código, descripción, precio y número de existencias. De cada cliente se desea guardar el código, nombre, apellidos, dirección y número telefónico. Un cliente puede comprar varios productos en la tienda y un mismo producto puede ser comprado por varios clientes. Cada vez que se compre un artículo quedará registrada la compra en la base de datos junto con la fecha en la que se compró el artículo. La tienda tiene contactos con varios proveedores que son los que suministran los productos. Un mismo producto puede ser suministrado por varios proveedores. De cada proveedor se desea guardar el código, nombres, apellidos, dirección, provincia y número de teléfono.
 
 ####   🖥️ Diagrama:
+<img width="1859" height="366" alt="image" src="https://github.com/user-attachments/assets/f0ef1899-d412-4928-9bcd-ca65735a144f" />
+
 
 
 
@@ -92,6 +94,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 
 ####   🖥️ Diagrama:
+<img width="1579" height="670" alt="image" src="https://github.com/user-attachments/assets/7b19d096-db7f-4ebb-ae77-cd370e65425e" />
 
 
 
@@ -107,6 +110,7 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 
 ####   🖥️ Diagrama:
+<img width="1244" height="836" alt="image" src="https://github.com/user-attachments/assets/3c9b0266-1084-491c-8617-8ab0ef9dc681" />
 
 
 
