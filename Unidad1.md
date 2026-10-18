@@ -44,6 +44,7 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cada vuelo lo realiza un avión. Los pasajeros realizan reservas para un vuelo específico, indicando asiento y tarifa pagada en el momento de la reserva.
 
 ####   🖥️ Diagrama:
+<img width="1409" height="560" alt="image" src="https://github.com/user-attachments/assets/ee260e5f-38b7-498f-ad94-24c8d644c5e6" />
 
 
 
