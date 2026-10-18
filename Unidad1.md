@@ -8,6 +8,8 @@
 Una biblioteca registra libros y autores. Un libro puede tener varios autores y un autor varios libros. Los socios toman libros prestados; de cada préstamo interesan la fecha de retiro y la de devolución.
 
 ####   🖥️ Diagrama:
+<img width="865" height="630" alt="image" src="https://github.com/user-attachments/assets/a21380ef-0c6b-47b0-971c-69a1869eb7dd" />
+
 
 
 
@@ -18,6 +20,7 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 Los clientes realizan pedidos que contienen varios platos con distinta cantidad. Los platos se agrupan en categorías. Cada pedido lo atiende un único mesero. El precio del plato debe registrarse tal como estaba al momento del pedido, aunque luego cambie.
 
 ####   🖥️ Diagrama:
+<img width="721" height="397" alt="image" src="https://github.com/user-attachments/assets/e842b2c3-772f-4bb2-afd0-d45e80167a00" />
 
 
 
