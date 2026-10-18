@@ -2,7 +2,7 @@
 
 
 ##    <p align="center"><strong>🔀 ***Aprendizaje autónomo:***</strong></p>
-###   🟢 Ejemplo 1: Sistema de Biblioteca :
+###   🟢 Ejemplo 1: Sistema de Biblioteca:
 💡 Descripción: 
 
 Una biblioteca registra libros y autores. Un libro puede tener varios autores y un autor varios libros. Los socios toman libros prestados; de cada préstamo interesan la fecha de retiro y la de devolución.
@@ -12,7 +12,7 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 
 
 ---
-###   🔵 Ejemplo 2: Pedidos de Restaurante :
+###   🔵 Ejemplo 2: Pedidos de Restaurante:
 💡 Descripción: 
 
 Los clientes realizan pedidos que contienen varios platos con distinta cantidad. Los platos se agrupan en categorías. Cada pedido lo atiende un único mesero. El precio del plato debe registrarse tal como estaba al momento del pedido, aunque luego cambie.
@@ -22,7 +22,7 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 
 
 ---
-###   🟡 Ejemplo 3: Clínica Médica :
+###   🟡 Ejemplo 3: Clínica Médica:
 💡 Descripción: 
 
 Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en fecha, hora y consultorio. De algunas citas se genera una receta que incluye medicamentos con dosis y duración. Cada médico pertenece a una especialidad.
@@ -32,7 +32,7 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 
 
 ---
-###   🟢 Ejemplo 4: Sistema de Aerolínea :
+###   🟢 Ejemplo 4: Sistema de Aerolínea:
 💡 Descripción: 
 
 Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cada vuelo lo realiza un avión. Los pasajeros realizan reservas para un vuelo específico, indicando asiento y tarifa pagada en el momento de la reserva.
@@ -42,7 +42,7 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 
 
 ---
-###   🔵 Ejercicio 5: Empresa Discográfica :
+###   🔵 Ejercicio 5: Empresa Discográfica:
 💡 Descripción: 
 
 Una empresa discográfica necesita modelar los datos sobre sus diferentes recursos según las siguientes características:
@@ -59,7 +59,7 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 
 
 ---
-###   🟡 Ejercicio 6: Tienda Informática :
+###   🟡 Ejercicio 6: Tienda Informática:
 💡 Descripción: 
 
 Se desea crear una aplicación para la gestión de una tienda informática. La tienda dispone de una serie de productos que se venden a los clientes. De cada producto informático se desea guardar el código, descripción, precio y número de existencias. De cada cliente se desea guardar el código, nombre, apellidos, dirección y número telefónico. Un cliente puede comprar varios productos en la tienda y un mismo producto puede ser comprado por varios clientes. Cada vez que se compre un artículo quedará registrada la compra en la base de datos junto con la fecha en la que se compró el artículo. La tienda tiene contactos con varios proveedores que son los que suministran los productos. Un mismo producto puede ser suministrado por varios proveedores. De cada proveedor se desea guardar el código, nombres, apellidos, dirección, provincia y número de teléfono.
@@ -69,7 +69,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 
 ---
-###   🟢 Ejercicio 7: Discos Musicales :
+###   🟢 Ejercicio 7: Discos Musicales:
 💡 Descripción:
 
 🔹 La tienda vende discos de diferentes géneros musicales y cantantes
@@ -88,7 +88,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 
 ---
-###   🔵 Ejercicio 8: Camiones :
+###   🔵 Ejercicio 8: Camiones:
 💡 Descripción: 
 
 Se desea informatizar la gestión de una empresa de transporte que reparte paquetes por toda España. Los encargados de llevar los paquetes son los camioneros, de los que se quiere guardar la cédula, nombre, teléfono, dirección, salario y población en que vive. De los paquetes transportados interesa conocer el código del paquete, descripción, destinatario y dirección del destinatario.
@@ -103,7 +103,7 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 
 ---
-###   🟡 Ejercicio 9: Veterinaria :
+###   🟡 Ejercicio 9: Veterinaria:
 💡 Descripción: 
 
 🔹 Del propietario interesa: cédula, apellidos, nombres, dirección, teléfonos
@@ -135,16 +135,22 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 
 ---
-###   🟢 10. :
+###   🟢 Ejercicio 10: Empresa:
 💡 Descripción: 
+
+La empresa necesita administrar sus departamentos, empleados, proyectos y el historial de salarios.
+
+Cada empleado pertenece a un departamento y puede trabajar en varios proyectos. También existen empleados que supervisan a otros empleados. Se necesita registrar el historial salarial de cada empleado.
 
 ####   🖥️ Diagrama:
 
 
 
 ---
-###   🔵 11. :
+###   🔵 Ejercicio 11: Universidad :
 💡 Descripción: 
+
+Los alumnos se inscriben en cursos obteniendo una calificación por ciclo. Algunos cursos exigen haber aprobado otros cursos antes, e incluso exigen una nota mínima como prerrequisito.
 
 ####   🖥️ Diagrama:
 
