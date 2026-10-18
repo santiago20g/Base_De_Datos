@@ -144,6 +144,7 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 
 ####   🖥️ Diagrama:
+<img width="1328" height="751" alt="image" src="https://github.com/user-attachments/assets/e468d47c-cc4b-4175-917d-94f9a2ce92b1" />
 
 
 
