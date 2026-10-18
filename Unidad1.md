@@ -62,6 +62,7 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 
 
 ####   🖥️ Diagrama:
+<img width="1349" height="352" alt="image" src="https://github.com/user-attachments/assets/5bd405b3-2cf6-400b-9322-0c976f3440a1" />
 
 
 
