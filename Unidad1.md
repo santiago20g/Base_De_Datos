@@ -42,7 +42,7 @@ CREATE TABLE Prestamo (
     id_libro VARCHAR(20),
     id_socio VARCHAR(15),
     fecha_retiro DATE NOT NULL,
-    fecha_devolucion DATE, -- Puede ser nulo si el libro aún no ha sido devuelto
+    fecha_devolucion DATE, 
     PRIMARY KEY (id_libro, id_socio, fecha_retiro),
     FOREIGN KEY (id_libro) REFERENCES Libro(id_libro),
     FOREIGN KEY (id_socio) REFERENCES Socio(id_socio)
@@ -154,9 +154,9 @@ CREATE TABLE Cita (
 
 CREATE TABLE Receta (
     id_receta VARCHAR(20) PRIMARY KEY,
-    dosis VARCHAR(100), -- Varchar porque las dosis varían en formato (ej. "2 pastillas")
+    dosis VARCHAR(100),
     duracion VARCHAR(100),
-    id_cita VARCHAR(20) NOT NULL UNIQUE, -- Relación 1:1 o 1:0 según diagrama
+    id_cita VARCHAR(20) NOT NULL UNIQUE,
     FOREIGN KEY (id_cita) REFERENCES Cita(id_cita)
 );
 
@@ -510,7 +510,7 @@ CREATE TABLE Telefono_propietario (
 
 CREATE TABLE Familiar_contacto (
     cedula VARCHAR(15) PRIMARY KEY,
-    cedula_propietario VARCHAR(15) NOT NULL UNIQUE, -- Unique porque un propietario tiene 1 solo familiar de contacto
+    cedula_propietario VARCHAR(15) NOT NULL UNIQUE,
     nombre VARCHAR(100) NOT NULL,
     telefono VARCHAR(15),
     FOREIGN KEY (cedula_propietario) REFERENCES Propietario(cedula)
