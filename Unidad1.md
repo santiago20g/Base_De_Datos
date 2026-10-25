@@ -61,6 +61,7 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 <img width="1409" height="560" alt="image" src="https://github.com/user-attachments/assets/ee260e5f-38b7-498f-ad94-24c8d644c5e6" />
 
 ####   🖥️ Modelo Relacional:
+<img width="1006" height="1007" alt="image" src="https://github.com/user-attachments/assets/3641763b-fb5b-48fd-bfe0-718d9d781d7d" />
 
 
 
@@ -82,6 +83,7 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 <img width="1349" height="352" alt="image" src="https://github.com/user-attachments/assets/5bd405b3-2cf6-400b-9322-0c976f3440a1" />
 
 ####   🖥️ Modelo Relacional:
+<img width="1079" height="837" alt="image" src="https://github.com/user-attachments/assets/e33acbd3-f82e-4982-a6f6-359aa8a313a4" />
 
 
 
