@@ -10,10 +10,10 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="865" height="630" alt="image" src="https://github.com/user-attachments/assets/a21380ef-0c6b-47b0-971c-69a1869eb7dd" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="693" height="903" alt="image" src="https://github.com/user-attachments/assets/47e46617-6be2-4da9-8ef1-a4ecf6f29cc1" />
 
-
+####   📋 Codigo SQL:
 
 
 
@@ -26,12 +26,47 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1208" height="644" alt="image" src="https://github.com/user-attachments/assets/cb724d02-852d-4495-ae12-c5b48c23e88b" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="692" height="923" alt="image" src="https://github.com/user-attachments/assets/bf0898f5-ee0b-41bd-ad54-67ed7009aada" />
 
+####   📋 Codigo SQL:
+```
+CREATE DATABASE ej1_biblioteca;
+USE ej1_biblioteca;
 
+CREATE TABLE Autor (
+    id_autor INT PRIMARY KEY,
+    nombre   VARCHAR(100) NOT NULL
+);
 
+CREATE TABLE Libro (
+    id_libro INT PRIMARY KEY,
+    titulo   VARCHAR(150) NOT NULL
+);
 
+CREATE TABLE Escrito (
+    id_libro INT NOT NULL,
+    id_autor INT NOT NULL,
+    PRIMARY KEY (id_libro, id_autor),
+    FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
+    FOREIGN KEY (id_autor) REFERENCES Autor (id_autor)
+);
+
+CREATE TABLE Socio (
+    id_socio INT PRIMARY KEY,
+    nombre   VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Prestamo (
+    id_libro         INT  NOT NULL,
+    id_socio         INT  NOT NULL,
+    fecha_retiro     DATE NOT NULL,
+    fecha_devolucion DATE,
+    PRIMARY KEY (id_libro, id_socio),
+    FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
+    FOREIGN KEY (id_socio) REFERENCES Socio (id_socio)
+);
+```
 
 
 
@@ -45,9 +80,10 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1202" height="669" alt="image" src="https://github.com/user-attachments/assets/56105f83-c648-4295-a6d8-09613bcad5db" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="970" height="1318" alt="image" src="https://github.com/user-attachments/assets/85aaf4b5-f6dc-4844-acdb-443dcad0fd83" />
 
+####   📋 Codigo SQL:
 
 
 
@@ -60,9 +96,10 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1409" height="560" alt="image" src="https://github.com/user-attachments/assets/ee260e5f-38b7-498f-ad94-24c8d644c5e6" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="1006" height="1007" alt="image" src="https://github.com/user-attachments/assets/3641763b-fb5b-48fd-bfe0-718d9d781d7d" />
 
+####   📋 Codigo SQL:
 
 
 
@@ -82,9 +119,10 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1349" height="352" alt="image" src="https://github.com/user-attachments/assets/5bd405b3-2cf6-400b-9322-0c976f3440a1" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="1079" height="837" alt="image" src="https://github.com/user-attachments/assets/e33acbd3-f82e-4982-a6f6-359aa8a313a4" />
 
+####   📋 Codigo SQL:
 
 
 
@@ -97,9 +135,10 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1859" height="366" alt="image" src="https://github.com/user-attachments/assets/f0ef1899-d412-4928-9bcd-ca65735a144f" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="1001" height="1083" alt="image" src="https://github.com/user-attachments/assets/d0d7ed61-10f1-42b8-ac06-68a2612fbe52" />
 
+####   📋 Codigo SQL:
 
 
 
@@ -122,9 +161,10 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1579" height="670" alt="image" src="https://github.com/user-attachments/assets/7b19d096-db7f-4ebb-ae77-cd370e65425e" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="999" height="1307" alt="image" src="https://github.com/user-attachments/assets/c44b3140-8c15-431a-af60-d47bb850bc7f" />
 
+####   📋 Codigo SQL:
 
 
 
@@ -142,9 +182,10 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1245" height="834" alt="image" src="https://github.com/user-attachments/assets/5b3e415d-1636-43c0-87e3-94223a868308" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="1110" height="906" alt="image" src="https://github.com/user-attachments/assets/f054c39b-b983-4594-a91d-a68e18080805" />
 
+####   📋 Codigo SQL:
 
 
 
@@ -179,8 +220,11 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1328" height="751" alt="image" src="https://github.com/user-attachments/assets/e468d47c-cc4b-4175-917d-94f9a2ce92b1" />
 
-####   🖥️ Modelo Relacional:
+####   🗺️ Modelo Relacional:
 <img width="1040" height="1762" alt="image" src="https://github.com/user-attachments/assets/2e5954f4-c114-43ac-946e-e2061743a083" />
+
+####   📋 Codigo SQL:
+
 
 
 
