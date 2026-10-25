@@ -37,6 +37,7 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/15EojpwPuwIkJmkd_PfBqXsZQg5T4C80O?usp=sharing)
 
 
 ---
@@ -56,6 +57,7 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/17ilOvlSg-OAD6ACTYzot7X1PMIALhDFV?usp=sharing)
 
 
 ---
@@ -75,6 +77,7 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/1MsvnrqFU1QINvmm7HHQGngf_oMVNanH-?usp=sharing)
 
 
 ---
@@ -101,6 +104,7 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/1gvZnFkp6V38QNySb1mzMLyA6Oi3OHEk6?usp=sharing)
 
 
 ---
@@ -120,6 +124,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/1tC8E_G8xD8Vg-YQP8zLLZIoqTPgkaejA?usp=sharing)
 
 
 ---
@@ -148,6 +153,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/1G3xQmpwxqGkur2PfI7_OYtHAcB4PGqLa?usp=sharing)
 
 
 ---
@@ -169,6 +175,7 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ####   📋 Codigo SQL:
 
+####  [Link de Drive](https://drive.google.com/drive/folders/1RZKvtSmcNUIOk9PDdZWvTyZTa-PSODGP?usp=sharing)
 
 
 ---
@@ -210,6 +217,7 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ```
 
+####  [Link de Drive](https://drive.google.com/drive/folders/1tK3lw2Ddf1jrLu0VS-DtI63q4aQorKpj?usp=sharing)
 
 
 ---
