@@ -30,7 +30,9 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 <img width="692" height="923" alt="image" src="https://github.com/user-attachments/assets/bf0898f5-ee0b-41bd-ad54-67ed7009aada" />
 
 ####   📋 Codigo SQL:
+
 ```
+
 CREATE DATABASE ej1_biblioteca;
 USE ej1_biblioteca;
 
@@ -66,6 +68,7 @@ CREATE TABLE Prestamo (
     FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
     FOREIGN KEY (id_socio) REFERENCES Socio (id_socio)
 );
+
 ```
 
 
