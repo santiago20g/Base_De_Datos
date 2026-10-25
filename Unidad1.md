@@ -10,6 +10,10 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="865" height="630" alt="image" src="https://github.com/user-attachments/assets/a21380ef-0c6b-47b0-971c-69a1869eb7dd" />
 
+####   🖥️ Modelo Relacional:
+<img width="693" height="903" alt="image" src="https://github.com/user-attachments/assets/47e46617-6be2-4da9-8ef1-a4ecf6f29cc1" />
+
+
 
 
 
@@ -21,6 +25,12 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1208" height="644" alt="image" src="https://github.com/user-attachments/assets/cb724d02-852d-4495-ae12-c5b48c23e88b" />
+
+####   🖥️ Modelo Relacional:
+<img width="692" height="923" alt="image" src="https://github.com/user-attachments/assets/bf0898f5-ee0b-41bd-ad54-67ed7009aada" />
+
+
+
 
 
 
@@ -35,6 +45,10 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1202" height="669" alt="image" src="https://github.com/user-attachments/assets/56105f83-c648-4295-a6d8-09613bcad5db" />
 
+####   🖥️ Modelo Relacional:
+<img width="970" height="1318" alt="image" src="https://github.com/user-attachments/assets/85aaf4b5-f6dc-4844-acdb-443dcad0fd83" />
+
+
 
 
 ---
@@ -45,6 +59,9 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1409" height="560" alt="image" src="https://github.com/user-attachments/assets/ee260e5f-38b7-498f-ad94-24c8d644c5e6" />
+
+####   🖥️ Modelo Relacional:
+
 
 
 
@@ -64,6 +81,9 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1349" height="352" alt="image" src="https://github.com/user-attachments/assets/5bd405b3-2cf6-400b-9322-0c976f3440a1" />
 
+####   🖥️ Modelo Relacional:
+
+
 
 
 ---
@@ -74,6 +94,9 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1859" height="366" alt="image" src="https://github.com/user-attachments/assets/f0ef1899-d412-4928-9bcd-ca65735a144f" />
+
+####   🖥️ Modelo Relacional:
+
 
 
 
@@ -96,6 +119,9 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1579" height="670" alt="image" src="https://github.com/user-attachments/assets/7b19d096-db7f-4ebb-ae77-cd370e65425e" />
 
+####   🖥️ Modelo Relacional:
+
+
 
 
 ---
@@ -111,6 +137,9 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1245" height="834" alt="image" src="https://github.com/user-attachments/assets/5b3e415d-1636-43c0-87e3-94223a868308" />
+
+####   🖥️ Modelo Relacional:
+
 
 
 
@@ -145,6 +174,8 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1328" height="751" alt="image" src="https://github.com/user-attachments/assets/e468d47c-cc4b-4175-917d-94f9a2ce92b1" />
+####   🖥️ Modelo Relacional:
+
 
 
 ---
