@@ -98,6 +98,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 <img width="1859" height="366" alt="image" src="https://github.com/user-attachments/assets/f0ef1899-d412-4928-9bcd-ca65735a144f" />
 
 ####   🖥️ Modelo Relacional:
+<img width="1001" height="1083" alt="image" src="https://github.com/user-attachments/assets/d0d7ed61-10f1-42b8-ac06-68a2612fbe52" />
 
 
 
