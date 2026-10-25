@@ -15,7 +15,38 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Autor (
+    id_autor VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
+CREATE TABLE Libro (
+    id_libro VARCHAR(20) PRIMARY KEY,
+    titulo VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE Escritor (
+    id_autor VARCHAR(15),
+    id_libro VARCHAR(20),
+    PRIMARY KEY (id_autor, id_libro),
+    FOREIGN KEY (id_autor) REFERENCES Autor(id_autor),
+    FOREIGN KEY (id_libro) REFERENCES Libro(id_libro)
+);
+
+CREATE TABLE Socio (
+    id_socio VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Prestamo (
+    id_libro VARCHAR(20),
+    id_socio VARCHAR(15),
+    fecha_retiro DATE NOT NULL,
+    fecha_devolucion DATE, -- Puede ser nulo si el libro aún no ha sido devuelto
+    PRIMARY KEY (id_libro, id_socio, fecha_retiro),
+    FOREIGN KEY (id_libro) REFERENCES Libro(id_libro),
+    FOREIGN KEY (id_socio) REFERENCES Socio(id_socio)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1hQhupWU6kbmxWzCAd7a4b5TH6CNw8TLQ?usp=sharing)
@@ -34,7 +65,46 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Cliente (
+    id_cliente VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
+CREATE TABLE Mesero (
+    id_mesero VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Pedido (
+    id_pedido VARCHAR(20) PRIMARY KEY,
+    id_cliente VARCHAR(15) NOT NULL,
+    id_mesero VARCHAR(15) NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_mesero) REFERENCES Mesero(id_mesero)
+);
+
+CREATE TABLE Categoria (
+    id_categoria VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Plato (
+    id_plato VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(6,2) NOT NULL,
+    id_categoria VARCHAR(15) NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria)
+);
+
+CREATE TABLE Detalle_pedido (
+    id_pedido VARCHAR(20),
+    id_plato VARCHAR(15),
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(6,2) NOT NULL,
+    PRIMARY KEY (id_pedido, id_plato),
+    FOREIGN KEY (id_pedido) REFERENCES Pedido(id_pedido),
+    FOREIGN KEY (id_plato) REFERENCES Plato(id_plato)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/15EojpwPuwIkJmkd_PfBqXsZQg5T4C80O?usp=sharing)
@@ -54,7 +124,54 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Especialidad (
+    id_especialidad VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
+CREATE TABLE Medico (
+    id_medico VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    id_especialidad VARCHAR(15) NOT NULL,
+    FOREIGN KEY (id_especialidad) REFERENCES Especialidad(id_especialidad)
+);
+
+CREATE TABLE Paciente (
+    id_paciente VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Cita (
+    id_cita VARCHAR(20) PRIMARY KEY,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    consultorio VARCHAR(20) NOT NULL,
+    id_paciente VARCHAR(15) NOT NULL,
+    id_medico VARCHAR(15) NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES Paciente(id_paciente),
+    FOREIGN KEY (id_medico) REFERENCES Medico(id_medico)
+);
+
+CREATE TABLE Receta (
+    id_receta VARCHAR(20) PRIMARY KEY,
+    dosis VARCHAR(100), -- Varchar porque las dosis varían en formato (ej. "2 pastillas")
+    duracion VARCHAR(100),
+    id_cita VARCHAR(20) NOT NULL UNIQUE, -- Relación 1:1 o 1:0 según diagrama
+    FOREIGN KEY (id_cita) REFERENCES Cita(id_cita)
+);
+
+CREATE TABLE Medicamento (
+    id_medicamento VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Incluye (
+    id_receta VARCHAR(20),
+    id_medicamento VARCHAR(15),
+    PRIMARY KEY (id_receta, id_medicamento),
+    FOREIGN KEY (id_receta) REFERENCES Receta(id_receta),
+    FOREIGN KEY (id_medicamento) REFERENCES Medicamento(id_medicamento)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/17ilOvlSg-OAD6ACTYzot7X1PMIALhDFV?usp=sharing)
@@ -74,7 +191,33 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Avion (
+    id_avion VARCHAR(15) PRIMARY KEY
+);
 
+CREATE TABLE Vuelo (
+    numero VARCHAR(15) PRIMARY KEY,
+    fecha DATE NOT NULL,
+    origen VARCHAR(50) NOT NULL,
+    destino VARCHAR(50) NOT NULL,
+    id_avion VARCHAR(15) NOT NULL,
+    FOREIGN KEY (id_avion) REFERENCES Avion(id_avion)
+);
+
+CREATE TABLE Pasajero (
+    id_pasajero VARCHAR(20) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Reserva (
+    id_pasajero VARCHAR(20),
+    numero VARCHAR(15),
+    asiento VARCHAR(10) NOT NULL,
+    tarifa DECIMAL(8,2) NOT NULL,
+    PRIMARY KEY (id_pasajero, numero),
+    FOREIGN KEY (id_pasajero) REFERENCES Pasajero(id_pasajero),
+    FOREIGN KEY (numero) REFERENCES Vuelo(numero)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1MsvnrqFU1QINvmm7HHQGngf_oMVNanH-?usp=sharing)
@@ -101,7 +244,31 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Manager (
+    id_manager VARCHAR(20) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
+CREATE TABLE Artista (
+    NIF VARCHAR(20) PRIMARY KEY,
+    nombre VARCHAR(150) NOT NULL,
+    id_manager VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_manager) REFERENCES Manager(id_manager)
+);
+
+CREATE TABLE Evento_promocion (
+    id_evento VARCHAR(20) PRIMARY KEY,
+    fecha_celebracion DATE NOT NULL,
+    numero_asistentes INT
+);
+
+CREATE TABLE Participa (
+    NIF VARCHAR(20),
+    id_evento VARCHAR(20),
+    PRIMARY KEY (NIF, id_evento),
+    FOREIGN KEY (NIF) REFERENCES Artista(NIF),
+    FOREIGN KEY (id_evento) REFERENCES Evento_promocion(id_evento)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1gvZnFkp6V38QNySb1mzMLyA6Oi3OHEk6?usp=sharing)
@@ -121,7 +288,46 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Cliente (
+    codigo VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    direccion VARCHAR(200),
+    telefono VARCHAR(15)
+);
 
+CREATE TABLE Producto (
+    codigo VARCHAR(15) PRIMARY KEY,
+    descripcion VARCHAR(200) NOT NULL,
+    precio DECIMAL(8,2) NOT NULL,
+    existencias INT NOT NULL
+);
+
+CREATE TABLE Compra (
+    id_compra VARCHAR(20) PRIMARY KEY,
+    codigo_cliente VARCHAR(15) NOT NULL,
+    codigo_producto VARCHAR(15) NOT NULL,
+    fecha DATE NOT NULL,
+    FOREIGN KEY (codigo_cliente) REFERENCES Cliente(codigo),
+    FOREIGN KEY (codigo_producto) REFERENCES Producto(codigo)
+);
+
+CREATE TABLE Proveedor (
+    codigo VARCHAR(15) PRIMARY KEY,
+    nombres VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    direccion VARCHAR(200),
+    provincia VARCHAR(50),
+    telefono VARCHAR(15)
+);
+
+CREATE TABLE Suministra (
+    codigo_producto VARCHAR(15),
+    codigo_proveedor VARCHAR(15),
+    PRIMARY KEY (codigo_producto, codigo_proveedor),
+    FOREIGN KEY (codigo_producto) REFERENCES Producto(codigo),
+    FOREIGN KEY (codigo_proveedor) REFERENCES Proveedor(codigo)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1tC8E_G8xD8Vg-YQP8zLLZIoqTPgkaejA?usp=sharing)
@@ -150,7 +356,39 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Genero (
+    id_genero VARCHAR(15) PRIMARY KEY
+);
 
+CREATE TABLE Cantante (
+    id_cantante VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    pais VARCHAR(50)
+);
+
+CREATE TABLE Disco (
+    identificador VARCHAR(20) PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    precio DECIMAL(6,2) NOT NULL,
+    id_genero VARCHAR(15) NOT NULL,
+    id_cantante VARCHAR(15) NOT NULL,
+    FOREIGN KEY (id_genero) REFERENCES Genero(id_genero),
+    FOREIGN KEY (id_cantante) REFERENCES Cantante(id_cantante)
+);
+
+CREATE TABLE Cancion (
+    id_cancion VARCHAR(20) PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Contiene (
+    id_disco VARCHAR(20),
+    id_cancion VARCHAR(20),
+    posicion INT NOT NULL,
+    PRIMARY KEY (id_disco, id_cancion),
+    FOREIGN KEY (id_disco) REFERENCES Disco(identificador),
+    FOREIGN KEY (id_cancion) REFERENCES Cancion(id_cancion)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1G3xQmpwxqGkur2PfI7_OYtHAcB4PGqLa?usp=sharing)
@@ -174,6 +412,48 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 <img width="1110" height="906" alt="image" src="https://github.com/user-attachments/assets/f054c39b-b983-4594-a91d-a68e18080805" />
 
 ####   📋 Codigo SQL:
+```SQL
+CREATE TABLE Provincia (
+    codigo VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Camionero (
+    cedula VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(15),
+    direccion VARCHAR(200),
+    salario DECIMAL(8,2),
+    poblacion VARCHAR(50)
+);
+
+CREATE TABLE Paquete (
+    codigo VARCHAR(20) PRIMARY KEY,
+    descripcion VARCHAR(200),
+    destinatario VARCHAR(100) NOT NULL,
+    direccion_destinatario VARCHAR(200) NOT NULL,
+    codigo_provincia VARCHAR(15) NOT NULL,
+    cedula_camionero VARCHAR(15) NOT NULL,
+    FOREIGN KEY (codigo_provincia) REFERENCES Provincia(codigo),
+    FOREIGN KEY (cedula_camionero) REFERENCES Camionero(cedula)
+);
+
+CREATE TABLE Camion (
+    matricula VARCHAR(15) PRIMARY KEY,
+    modelo VARCHAR(50),
+    tipo VARCHAR(50),
+    potencia VARCHAR(20)
+);
+
+CREATE TABLE Conduce (
+    cedula VARCHAR(15),
+    matricula VARCHAR(15),
+    fecha DATE NOT NULL,
+    PRIMARY KEY (cedula, matricula, fecha),
+    FOREIGN KEY (cedula) REFERENCES Camionero(cedula),
+    FOREIGN KEY (matricula) REFERENCES Camion(matricula)
+);
+```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1RZKvtSmcNUIOk9PDdZWvTyZTa-PSODGP?usp=sharing)
 
@@ -214,7 +494,65 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ####   📋 Codigo SQL:
 ```SQL
+CREATE TABLE Propietario (
+    cedula VARCHAR(15) PRIMARY KEY,
+    nombres VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    direccion VARCHAR(200)
+);
 
+CREATE TABLE Telefono_propietario (
+    cedula VARCHAR(15),
+    telefono VARCHAR(15),
+    PRIMARY KEY (cedula, telefono),
+    FOREIGN KEY (cedula) REFERENCES Propietario(cedula)
+);
+
+CREATE TABLE Familiar_contacto (
+    cedula VARCHAR(15) PRIMARY KEY,
+    cedula_propietario VARCHAR(15) NOT NULL UNIQUE, -- Unique porque un propietario tiene 1 solo familiar de contacto
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(15),
+    FOREIGN KEY (cedula_propietario) REFERENCES Propietario(cedula)
+);
+
+CREATE TABLE Mascota (
+    id_mascota VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    tipo VARCHAR(30),
+    fecha_nacimiento DATE,
+    cedula_propietario VARCHAR(15) NOT NULL,
+    FOREIGN KEY (cedula_propietario) REFERENCES Propietario(cedula)
+);
+
+CREATE TABLE Personal (
+    codigo VARCHAR(15) PRIMARY KEY,
+    cedula VARCHAR(15) NOT NULL UNIQUE,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Veterinario (
+    codigo VARCHAR(15) PRIMARY KEY,
+    fecha_alta DATE NOT NULL,
+    especialidad VARCHAR(50),
+    FOREIGN KEY (codigo) REFERENCES Personal(codigo)
+);
+
+CREATE TABLE Consulta (
+    id_mascota VARCHAR(15),
+    codigo_veterinario VARCHAR(15),
+    fecha DATE NOT NULL,
+    diagnostico VARCHAR(255),
+    PRIMARY KEY (id_mascota, codigo_veterinario, fecha),
+    FOREIGN KEY (id_mascota) REFERENCES Mascota(id_mascota),
+    FOREIGN KEY (codigo_veterinario) REFERENCES Veterinario(codigo)
+);
+
+CREATE TABLE Auxiliar (
+    codigo VARCHAR(15) PRIMARY KEY,
+    base_cotizacion DECIMAL(8,2) NOT NULL,
+    FOREIGN KEY (codigo) REFERENCES Personal(codigo)
+);
 ```
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1tK3lw2Ddf1jrLu0VS-DtI63q4aQorKpj?usp=sharing)
