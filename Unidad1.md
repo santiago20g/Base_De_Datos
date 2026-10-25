@@ -26,8 +26,8 @@ CREATE TABLE Libro (
 );
 
 CREATE TABLE Escritor (
-    id_autor VARCHAR(15),
-    id_libro VARCHAR(20),
+    id_autor VARCHAR(15) NOT NULL,
+    id_libro VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_autor, id_libro),
     FOREIGN KEY (id_autor) REFERENCES Autor(id_autor),
     FOREIGN KEY (id_libro) REFERENCES Libro(id_libro)
@@ -39,8 +39,8 @@ CREATE TABLE Socio (
 );
 
 CREATE TABLE Prestamo (
-    id_libro VARCHAR(20),
-    id_socio VARCHAR(15),
+    id_libro VARCHAR(20) NOT NULL,
+    id_socio VARCHAR(15) NOT NULL,
     fecha_retiro DATE NOT NULL,
     fecha_devolucion DATE, 
     PRIMARY KEY (id_libro, id_socio, fecha_retiro),
@@ -97,8 +97,8 @@ CREATE TABLE Plato (
 );
 
 CREATE TABLE Detalle_pedido (
-    id_pedido VARCHAR(20),
-    id_plato VARCHAR(15),
+    id_pedido VARCHAR(20) NOT NULL,
+    id_plato VARCHAR(15) NOT NULL,
     cantidad INT NOT NULL,
     precio_unitario DECIMAL(6,2) NOT NULL,
     PRIMARY KEY (id_pedido, id_plato),
@@ -154,8 +154,8 @@ CREATE TABLE Cita (
 
 CREATE TABLE Receta (
     id_receta VARCHAR(20) PRIMARY KEY,
-    dosis VARCHAR(100),
-    duracion VARCHAR(100),
+    dosis VARCHAR(100) NOT NULL,
+    duracion VARCHAR(100) NOT NULL,
     id_cita VARCHAR(20) NOT NULL UNIQUE,
     FOREIGN KEY (id_cita) REFERENCES Cita(id_cita)
 );
@@ -166,8 +166,8 @@ CREATE TABLE Medicamento (
 );
 
 CREATE TABLE Incluye (
-    id_receta VARCHAR(20),
-    id_medicamento VARCHAR(15),
+    id_receta VARCHAR(20) NOT NULL,
+    id_medicamento VARCHAR(15) NOT NULL,
     PRIMARY KEY (id_receta, id_medicamento),
     FOREIGN KEY (id_receta) REFERENCES Receta(id_receta),
     FOREIGN KEY (id_medicamento) REFERENCES Medicamento(id_medicamento)
@@ -210,8 +210,8 @@ CREATE TABLE Pasajero (
 );
 
 CREATE TABLE Reserva (
-    id_pasajero VARCHAR(20),
-    numero VARCHAR(15),
+    id_pasajero VARCHAR(20) NOT NULL,
+    numero VARCHAR(15) NOT NULL,
     asiento VARCHAR(10) NOT NULL,
     tarifa DECIMAL(8,2) NOT NULL,
     PRIMARY KEY (id_pasajero, numero),
@@ -259,12 +259,12 @@ CREATE TABLE Artista (
 CREATE TABLE Evento_promocion (
     id_evento VARCHAR(20) PRIMARY KEY,
     fecha_celebracion DATE NOT NULL,
-    numero_asistentes INT
+    numero_asistentes INT NOT NULL
 );
 
 CREATE TABLE Participa (
-    NIF VARCHAR(20),
-    id_evento VARCHAR(20),
+    NIF VARCHAR(20) NOT NULL,
+    id_evento VARCHAR(20) NOT NULL,
     PRIMARY KEY (NIF, id_evento),
     FOREIGN KEY (NIF) REFERENCES Artista(NIF),
     FOREIGN KEY (id_evento) REFERENCES Evento_promocion(id_evento)
@@ -322,8 +322,8 @@ CREATE TABLE Proveedor (
 );
 
 CREATE TABLE Suministra (
-    codigo_producto VARCHAR(15),
-    codigo_proveedor VARCHAR(15),
+    codigo_producto VARCHAR(15) NOT NULL,
+    codigo_proveedor VARCHAR(15) NOT NULL,
     PRIMARY KEY (codigo_producto, codigo_proveedor),
     FOREIGN KEY (codigo_producto) REFERENCES Producto(codigo),
     FOREIGN KEY (codigo_proveedor) REFERENCES Proveedor(codigo)
@@ -363,7 +363,7 @@ CREATE TABLE Genero (
 CREATE TABLE Cantante (
     id_cantante VARCHAR(15) PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    pais VARCHAR(50)
+    pais VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Disco (
@@ -382,8 +382,8 @@ CREATE TABLE Cancion (
 );
 
 CREATE TABLE Contiene (
-    id_disco VARCHAR(20),
-    id_cancion VARCHAR(20),
+    id_disco VARCHAR(20) NOT NULL,
+    id_cancion VARCHAR(20) NOT NULL,
     posicion INT NOT NULL,
     PRIMARY KEY (id_disco, id_cancion),
     FOREIGN KEY (id_disco) REFERENCES Disco(identificador),
@@ -423,7 +423,7 @@ CREATE TABLE Camionero (
     nombre VARCHAR(100) NOT NULL,
     telefono VARCHAR(15),
     direccion VARCHAR(200),
-    salario DECIMAL(8,2),
+    salario DECIMAL(8,2) NOT NULL,
     poblacion VARCHAR(50)
 );
 
@@ -446,8 +446,8 @@ CREATE TABLE Camion (
 );
 
 CREATE TABLE Conduce (
-    cedula VARCHAR(15),
-    matricula VARCHAR(15),
+    cedula VARCHAR(15) NOT NULL,
+    matricula VARCHAR(15) NOT NULL,
     fecha DATE NOT NULL,
     PRIMARY KEY (cedula, matricula, fecha),
     FOREIGN KEY (cedula) REFERENCES Camionero(cedula),
@@ -502,8 +502,8 @@ CREATE TABLE Propietario (
 );
 
 CREATE TABLE Telefono_propietario (
-    cedula VARCHAR(15),
-    telefono VARCHAR(15),
+    cedula VARCHAR(15) NOT NULL,
+    telefono VARCHAR(15) NOT NULL,
     PRIMARY KEY (cedula, telefono),
     FOREIGN KEY (cedula) REFERENCES Propietario(cedula)
 );
@@ -519,7 +519,7 @@ CREATE TABLE Familiar_contacto (
 CREATE TABLE Mascota (
     id_mascota VARCHAR(15) PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
-    tipo VARCHAR(30),
+    tipo VARCHAR(30) NOT NULL,
     fecha_nacimiento DATE,
     cedula_propietario VARCHAR(15) NOT NULL,
     FOREIGN KEY (cedula_propietario) REFERENCES Propietario(cedula)
@@ -539,8 +539,8 @@ CREATE TABLE Veterinario (
 );
 
 CREATE TABLE Consulta (
-    id_mascota VARCHAR(15),
-    codigo_veterinario VARCHAR(15),
+    id_mascota VARCHAR(15) NOT NULL,
+    codigo_veterinario VARCHAR(15) NOT NULL,
     fecha DATE NOT NULL,
     diagnostico VARCHAR(255),
     PRIMARY KEY (id_mascota, codigo_veterinario, fecha),
