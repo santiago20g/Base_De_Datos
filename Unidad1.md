@@ -14,7 +14,43 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 <img width="693" height="903" alt="image" src="https://github.com/user-attachments/assets/47e46617-6be2-4da9-8ef1-a4ecf6f29cc1" />
 
 ####   📋 Codigo SQL:
+```SQL
+CREATE DATABASE ejercicio01_biblioteca;
+USE ej1_biblioteca;
 
+CREATE TABLE Autor (
+    id_autor INT PRIMARY KEY,
+    nombre   VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Libro (
+    id_libro INT PRIMARY KEY,
+    titulo   VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Escrito (
+    id_libro INT NOT NULL,
+    id_autor INT NOT NULL,
+    PRIMARY KEY (id_libro, id_autor),
+    FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
+    FOREIGN KEY (id_autor) REFERENCES Autor (id_autor)
+);
+
+CREATE TABLE Socio (
+    id_socio INT PRIMARY KEY,
+    nombre   VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Prestamo (
+    id_libro         INT  NOT NULL,
+    id_socio         INT  NOT NULL,
+    fecha_retiro     DATE NOT NULL,
+    fecha_devolucion DATE,
+    PRIMARY KEY (id_libro, id_socio),
+    FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
+    FOREIGN KEY (id_socio) REFERENCES Socio (id_socio)
+);
+```
 
 
 ---
@@ -30,47 +66,51 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 <img width="692" height="923" alt="image" src="https://github.com/user-attachments/assets/bf0898f5-ee0b-41bd-ad54-67ed7009aada" />
 
 ####   📋 Codigo SQL:
+```SQL
+CREATE DATABASE ejercicio02_restaurante;
+USE ej2_restaurante;
 
+CREATE TABLE Cliente (
+    id_cliente INT PRIMARY KEY,
+    nombre     VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Mesero (
+    id_mesero INT PRIMARY KEY,
+    nombre    VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Pedido (
+    id_pedido  INT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    id_mesero  INT NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente (id_cliente),
+    FOREIGN KEY (id_mesero)  REFERENCES Mesero (id_mesero)
+);
+
+CREATE TABLE Categoria (
+    id_categoria INT PRIMARY KEY,
+    nombre       VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Plato (
+    id_plato     INT PRIMARY KEY,
+    nombre       VARCHAR(30) NOT NULL,
+    precio       DECIMAL(8,2) NOT NULL,
+    id_categoria INT NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES Categoria (id_categoria)
+);
+
+CREATE TABLE Detalle_pedido (
+    id_pedido       INT NOT NULL,
+    id_plato        INT NOT NULL,
+    cantidad        INT NOT NULL,
+    precio_unitario DECIMAL(8,2) NOT NULL,
+    PRIMARY KEY (id_pedido, id_plato),
+    FOREIGN KEY (id_pedido) REFERENCES Pedido (id_pedido),
+    FOREIGN KEY (id_plato)  REFERENCES Plato (id_plato)
+);
 ```
-
-CREATE DATABASE ej1_biblioteca;
-USE ej1_biblioteca;
-
-CREATE TABLE Autor (
-    id_autor INT PRIMARY KEY,
-    nombre   VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Libro (
-    id_libro INT PRIMARY KEY,
-    titulo   VARCHAR(150) NOT NULL
-);
-
-CREATE TABLE Escrito (
-    id_libro INT NOT NULL,
-    id_autor INT NOT NULL,
-    PRIMARY KEY (id_libro, id_autor),
-    FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
-    FOREIGN KEY (id_autor) REFERENCES Autor (id_autor)
-);
-
-CREATE TABLE Socio (
-    id_socio INT PRIMARY KEY,
-    nombre   VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Prestamo (
-    id_libro         INT  NOT NULL,
-    id_socio         INT  NOT NULL,
-    fecha_retiro     DATE NOT NULL,
-    fecha_devolucion DATE,
-    PRIMARY KEY (id_libro, id_socio),
-    FOREIGN KEY (id_libro) REFERENCES Libro (id_libro),
-    FOREIGN KEY (id_socio) REFERENCES Socio (id_socio)
-);
-
-```
-
 
 
 
@@ -87,6 +127,60 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 <img width="970" height="1318" alt="image" src="https://github.com/user-attachments/assets/85aaf4b5-f6dc-4844-acdb-443dcad0fd83" />
 
 ####   📋 Codigo SQL:
+```SQL
+CREATE DATABASE ej3_clinica;
+USE ej3_clinica;
+
+CREATE TABLE Especialidad (
+    id_especialidad INT PRIMARY KEY,
+    nombre          VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Medico (
+    id_medico       INT PRIMARY KEY,
+    nombre          VARCHAR(50) NOT NULL,
+    id_especialidad INT NOT NULL,
+    FOREIGN KEY (id_especialidad) REFERENCES Especialidad (id_especialidad)
+);
+
+CREATE TABLE Paciente (
+    id_paciente INT PRIMARY KEY,
+    nombre      VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Cita (
+    id_cita     INT PRIMARY KEY,
+    fecha       DATE NOT NULL,
+    hora        TIME NOT NULL,
+    consultorio VARCHAR(20) NOT NULL,
+    id_paciente INT NOT NULL,
+    id_medico   INT NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES Paciente (id_paciente),
+    FOREIGN KEY (id_medico)   REFERENCES Medico (id_medico)
+);
+
+CREATE TABLE Receta (
+    id_receta INT PRIMARY KEY,
+    dosis     VARCHAR(30) NOT NULL,
+    duracion  VARCHAR(15)  NOT NULL,
+    id_cita   INT NOT NULL UNIQUE,
+    FOREIGN KEY (id_cita) REFERENCES Cita (id_cita)
+);
+
+CREATE TABLE Medicamento (
+    id_medicamento INT PRIMARY KEY,
+    nombre         VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE Incluye (
+    id_receta      INT NOT NULL,
+    id_medicamento INT NOT NULL,
+    PRIMARY KEY (id_receta, id_medicamento),
+    FOREIGN KEY (id_receta)      REFERENCES Receta (id_receta),
+    FOREIGN KEY (id_medicamento) REFERENCES Medicamento (id_medicamento)
+);
+
+```
 
 
 
@@ -103,6 +197,9 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 <img width="1006" height="1007" alt="image" src="https://github.com/user-attachments/assets/3641763b-fb5b-48fd-bfe0-718d9d781d7d" />
 
 ####   📋 Codigo SQL:
+```SQL
+
+```
 
 
 
@@ -126,6 +223,9 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 <img width="1079" height="837" alt="image" src="https://github.com/user-attachments/assets/e33acbd3-f82e-4982-a6f6-359aa8a313a4" />
 
 ####   📋 Codigo SQL:
+```SQL
+
+```
 
 
 
@@ -142,7 +242,9 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 <img width="1001" height="1083" alt="image" src="https://github.com/user-attachments/assets/d0d7ed61-10f1-42b8-ac06-68a2612fbe52" />
 
 ####   📋 Codigo SQL:
+```SQL
 
+```
 
 
 
@@ -168,6 +270,9 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 <img width="999" height="1307" alt="image" src="https://github.com/user-attachments/assets/c44b3140-8c15-431a-af60-d47bb850bc7f" />
 
 ####   📋 Codigo SQL:
+```SQL
+
+```
 
 
 
@@ -227,7 +332,9 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 <img width="1040" height="1762" alt="image" src="https://github.com/user-attachments/assets/2e5954f4-c114-43ac-946e-e2061743a083" />
 
 ####   📋 Codigo SQL:
+```SQL
 
+```
 
 
 
