@@ -123,6 +123,7 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 <img width="1579" height="670" alt="image" src="https://github.com/user-attachments/assets/7b19d096-db7f-4ebb-ae77-cd370e65425e" />
 
 ####   🖥️ Modelo Relacional:
+<img width="999" height="1307" alt="image" src="https://github.com/user-attachments/assets/c44b3140-8c15-431a-af60-d47bb850bc7f" />
 
 
 
@@ -142,7 +143,7 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 <img width="1245" height="834" alt="image" src="https://github.com/user-attachments/assets/5b3e415d-1636-43c0-87e3-94223a868308" />
 
 ####   🖥️ Modelo Relacional:
-
+<img width="1110" height="906" alt="image" src="https://github.com/user-attachments/assets/f054c39b-b983-4594-a91d-a68e18080805" />
 
 
 
@@ -177,7 +178,9 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ####   🖥️ Diagrama Entidad-Relación:
 <img width="1328" height="751" alt="image" src="https://github.com/user-attachments/assets/e468d47c-cc4b-4175-917d-94f9a2ce92b1" />
+
 ####   🖥️ Modelo Relacional:
+<img width="1040" height="1762" alt="image" src="https://github.com/user-attachments/assets/2e5954f4-c114-43ac-946e-e2061743a083" />
 
 
 
