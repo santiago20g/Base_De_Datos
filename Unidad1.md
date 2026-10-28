@@ -49,6 +49,10 @@ CREATE TABLE Prestamo (
 );
 ```
 
+####   🖥️ Base de Datos:
+
+
+
 ####  [Link de Drive](https://drive.google.com/drive/folders/1hQhupWU6kbmxWzCAd7a4b5TH6CNw8TLQ?usp=sharing)
 
 ---
@@ -106,6 +110,10 @@ CREATE TABLE Detalle_pedido (
     FOREIGN KEY (id_plato) REFERENCES Plato(id_plato)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/15EojpwPuwIkJmkd_PfBqXsZQg5T4C80O?usp=sharing)
 
@@ -174,6 +182,10 @@ CREATE TABLE Incluye (
 );
 ```
 
+####   🖥️ Base de Datos:
+
+
+
 ####  [Link de Drive](https://drive.google.com/drive/folders/17ilOvlSg-OAD6ACTYzot7X1PMIALhDFV?usp=sharing)
 
 
@@ -219,6 +231,10 @@ CREATE TABLE Reserva (
     FOREIGN KEY (numero) REFERENCES Vuelo(numero)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1MsvnrqFU1QINvmm7HHQGngf_oMVNanH-?usp=sharing)
 
@@ -270,6 +286,10 @@ CREATE TABLE Participa (
     FOREIGN KEY (id_evento) REFERENCES Evento_promocion(id_evento)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1gvZnFkp6V38QNySb1mzMLyA6Oi3OHEk6?usp=sharing)
 
@@ -329,6 +349,10 @@ CREATE TABLE Suministra (
     FOREIGN KEY (codigo_proveedor) REFERENCES Proveedor(codigo)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1tC8E_G8xD8Vg-YQP8zLLZIoqTPgkaejA?usp=sharing)
 
@@ -390,6 +414,10 @@ CREATE TABLE Contiene (
     FOREIGN KEY (id_cancion) REFERENCES Cancion(id_cancion)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1G3xQmpwxqGkur2PfI7_OYtHAcB4PGqLa?usp=sharing)
 
@@ -454,6 +482,10 @@ CREATE TABLE Conduce (
     FOREIGN KEY (matricula) REFERENCES Camion(matricula)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1RZKvtSmcNUIOk9PDdZWvTyZTa-PSODGP?usp=sharing)
 
@@ -554,6 +586,10 @@ CREATE TABLE Auxiliar (
     FOREIGN KEY (codigo) REFERENCES Personal(codigo)
 );
 ```
+
+####   🖥️ Base de Datos:
+
+
 
 ####  [Link de Drive](https://drive.google.com/drive/folders/1tK3lw2Ddf1jrLu0VS-DtI63q4aQorKpj?usp=sharing)
 
