@@ -50,6 +50,7 @@ CREATE TABLE Prestamo (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="272" height="207" alt="image" src="https://github.com/user-attachments/assets/ada24bdb-197e-419a-9afb-a419e62b6030" />
 
 
 
@@ -112,6 +113,7 @@ CREATE TABLE Detalle_pedido (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="274" height="232" alt="image" src="https://github.com/user-attachments/assets/f6a1463c-1a0d-48ec-b9a8-cdf0e89181c6" />
 
 
 
@@ -183,6 +185,7 @@ CREATE TABLE Incluye (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="248" height="255" alt="image" src="https://github.com/user-attachments/assets/50a6e821-f20e-4fe7-acc4-59beaa8c76fb" />
 
 
 
@@ -233,6 +236,7 @@ CREATE TABLE Reserva (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="264" height="197" alt="image" src="https://github.com/user-attachments/assets/ae7fe45c-1fda-41ae-914c-01c2129ef983" />
 
 
 
@@ -288,6 +292,7 @@ CREATE TABLE Participa (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="295" height="195" alt="image" src="https://github.com/user-attachments/assets/6a9a2cd5-8eec-4d52-9fa8-f2c951fd2a41" />
 
 
 
@@ -351,6 +356,7 @@ CREATE TABLE Suministra (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="243" height="218" alt="image" src="https://github.com/user-attachments/assets/46c12545-f812-48ec-9605-d4e0cce35df4" />
 
 
 
@@ -416,6 +422,7 @@ CREATE TABLE Contiene (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="243" height="209" alt="image" src="https://github.com/user-attachments/assets/5404d114-06a6-4814-b34f-0fca1a1e00a5" />
 
 
 
@@ -484,6 +491,7 @@ CREATE TABLE Conduce (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="251" height="215" alt="image" src="https://github.com/user-attachments/assets/def4a244-c51b-4749-b555-96fd9bc44143" />
 
 
 
@@ -588,6 +596,7 @@ CREATE TABLE Auxiliar (
 ```
 
 ####   🖥️ Base de Datos:
+<img width="308" height="278" alt="image" src="https://github.com/user-attachments/assets/2bd16183-b73f-4c5f-83cf-9639e79e5a1f" />
 
 
 
